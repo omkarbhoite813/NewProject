@@ -1,0 +1,17 @@
+| Area                       |         Tests |
+| -------------------------- | ------------: |
+| Valid XML                  |           2–3 |
+| Invalid XML                |             2 |
+| Missing mandatory fields   |           2–3 |
+| Null/empty values          |           2–3 |
+| Invalid date/number        |           2–3 |
+| XML → TXT mapping          |           4–5 |
+| TXT formatting/order       |           3–4 |
+| Multiple XML records       |             2 |
+| Successful processing      |             2 |
+| Failed processing          |           2–3 |
+| Database failure           |             2 |
+| Storage failure            |             2 |
+| Duplicate transaction/file |             2 |
+| Logging/error paths        |           1–2 |
+| **Total**                  | **~30 tests** |
