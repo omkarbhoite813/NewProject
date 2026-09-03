@@ -35,3 +35,20 @@ private static string MapCustomer(CustomerXmlModel customer)
         customer.Address?.Country?.Trim()
     );
 }
+
+private static string MapCustomer(CustomerXmlModel customer)
+{
+    return string.Join("|",
+        $"CustomerId={customer.CustomerId?.Trim()}",
+        $"FirstName={customer.FirstName?.Trim()}",
+        $"LastName={customer.LastName?.Trim()}",
+        $"DateOfBirth={FormatDate(customer.DateOfBirth)}",
+        $"Email={customer.Email?.Trim()}",
+        $"Phone={customer.Phone?.Trim()}",
+        $"AddressLine1={customer.Address?.AddressLine1?.Trim()}",
+        $"AddressLine2={customer.Address?.AddressLine2?.Trim()}",
+        $"City={customer.Address?.City?.Trim()}",
+        $"PostCode={customer.Address?.PostCode?.Trim()}",
+        $"Country={customer.Address?.Country?.Trim()}"
+    );
+}
