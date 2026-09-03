@@ -15,3 +15,23 @@
 | Duplicate transaction/file |             2 |
 | Logging/error paths        |           1–2 |
 | **Total**                  | **~30 tests** |
+
+
+
+
+private static string MapCustomer(CustomerXmlModel customer)
+{
+    return string.Join("|",
+        customer.CustomerId?.Trim(),
+        customer.FirstName?.Trim(),
+        customer.LastName?.Trim(),
+        FormatDate(customer.DateOfBirth),
+        customer.Email?.Trim(),
+        customer.Phone?.Trim(),
+        customer.Address?.AddressLine1?.Trim(),
+        customer.Address?.AddressLine2?.Trim(),
+        customer.Address?.City?.Trim(),
+        customer.Address?.PostCode?.Trim(),
+        customer.Address?.Country?.Trim()
+    );
+}
